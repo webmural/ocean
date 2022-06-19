@@ -1,70 +1,49 @@
-.dew-diy {
-  --dew-shift: filter 33ms;
-  --dew-solar: violet;
-  --dew-lunar: indigo;
-  --dew-hover: hue-rotate(-30deg);
-}
-
-@media (prefers-contrast: more) {
-  .dew-diy {
-    --dew-solar: mistyrose;
-    --dew-lunar: indigo;
-  }
+::selection {
+  background: coral;
+  color: #020002;
 }
 
 :link {
-  box-shadow: 0 0 1em 1ex coral;
+  box-shadow: 0 0 1em 1ex purple;
+  transition: 200ms;
 }
 
 html {
-  font-family: sans-serif;
+  font-family: fantasy;
   font-size: calc(1em + 1vw + 1vh);
 }
 
-body {
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1ex 0;
-  margin-block: 1ex;
-  margin-inline: 0;
-  overflow-wrap: anywhere;
-  padding: 1em;
-  min-height: calc(100vh - 2ex);
-}
-
-.eye {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.big {
-  font-size: 10ex;
-}
-
 .pad {
-  box-sizing: border-box;
   padding: 1ex;
 }
 
-.orb {
-  border-radius: 100%;
+.unity {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: wrap;
+  margin: 0;
+  padding: 0;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: inline-end;
 }
 
-@media (orientation: landscape) {
-  body {
-    border-radius: 100%;
-    filter: hue-rotate(-90deg);
-    transform: rotate(90deg);
-  }
+.unified {
+  align-self: flex-end;
+  list-style: none;
+  padding: 1em;
+  flex-basis: 62%;
+  text-align: end;
 }
 
-@media (prefers-reduced-motion) {
-  [class] {
-    transition: none;
-  }
+.unified:first-child {
+  border-radius: 100% 0 0;
+}
+
+.unified:last-child {
+  border-radius: 0 0 0 100%;
+}
+
+body {
+  margin: 0;
 }
