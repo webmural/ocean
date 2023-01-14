@@ -1,16 +1,25 @@
-::selection {
-  background: coral;
-  color: #020002;
+:any-link {
+  text-decoration-style: wavy;
+  transition: 200ms;
 }
 
-:link {
-  box-shadow: 0 0 1em 1ex purple;
-  transition: 200ms;
+:focus {
+  outline: thick dotted;
+  text-decoration-style: dotted;
+}
+
+:hover {
+  text-decoration-style: double;
 }
 
 html {
   font-family: fantasy;
   font-size: calc(1em + 1vw + 1vh);
+  line-height: 1.618;
+}
+
+body {
+  margin: 0;
 }
 
 .pad {
@@ -42,8 +51,4 @@ html {
 
 .unified:last-child {
   border-radius: 0 0 0 100%;
-}
-
-body {
-  margin: 0;
 }
